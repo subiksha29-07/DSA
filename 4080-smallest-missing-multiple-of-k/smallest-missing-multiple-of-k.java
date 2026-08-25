@@ -1,7 +1,5 @@
 class Solution {
     public int missingMultiple(int[] nums, int k) {
-        Arrays.sort(nums);
-       // System.out.println(nums);
         Set<Integer> s = new LinkedHashSet<>();
         int n = nums.length;
       
