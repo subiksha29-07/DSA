@@ -4,18 +4,16 @@ class Solution {
         int r = height.length - 1;
         int min = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE;
-        while(l< r){
-            int width = r - l;
+        while(l<r){
             min = Math.min(height[l],height[r]);
-            max = Math.max(max,(min * width));
-            if(height[l] > height[r]){
-                r--;
+            int b = r - l;
+            max = Math.max(max,(b*min));
+            if(height[l] <= height[r]){
+                l++;
             }
             else{
-                l++;
-
-            }
-            
+                r--;
+            }    
         }
         return max;
     }
